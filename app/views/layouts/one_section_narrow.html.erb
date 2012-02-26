@@ -1,0 +1,6 @@
+<% content_for :main_section do %>
+  <div class="twelve columns">
+    <%= content_for?(:main_content) ? yield(:main_content) : yield %>
+  </div>
+<% end %>
+<%= render :file => 'layouts/main_narrow' %>

@@ -1,0 +1,9 @@
+<% content_for :first_section do %>
+  <%= content_for?(:only_section) ? yield(:only_section) : yield %>
+<% end %>
+
+<% content_for :second_section do %>
+  <%= render :partial => 'shared/sidebar' %>
+<% end %>
+
+<%= render :file => 'layouts/two_sections' %>

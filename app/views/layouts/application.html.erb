@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <title><%= title %></title>
+  <meta name="description" content="" />
+  <meta name="author" content="Dan Persa" />
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <%= render 'layouts/stylesheets' %>
+  <%= yield(:stylesheets) if content_for?(:stylesheets) %>
+  <%= render 'layouts/javascripts' %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="body <%= params[:controller].parameterize %> <%= params[:controller].parameterize %>_<%= params[:action].parameterize %>">
+  <%= content_for?(:body) ? yield(:body) : yield %>
+  <div id="dialog" class="reveal-modal">
+    <div id="dialog-div"></div>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+</body>
+</html>

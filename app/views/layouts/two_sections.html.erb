@@ -1,0 +1,10 @@
+<% content_for :main_section do %>
+  <div class="seven columns">
+    <%= content_for?(:first_section) ? yield(:first_section) : yield %>
+  </div>
+  <div class="four columns offset-by-one">
+    <%= yield(:second_section) if content_for?(:second_section) %>
+  </div>
+<% end %>
+
+<%= render :file => 'layouts/main' %>
