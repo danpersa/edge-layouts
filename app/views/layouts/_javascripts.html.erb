@@ -3,7 +3,7 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <%= javascript_include_tag "application" %>
-<%= javascript_include_tag "http://www.zurb.com/javascripts/plugins/jquery.textchange.min.js" %>
+<%= javascript_include_tag "jquery.textchange.min.js" %>
 
 <% if js_for_controller_exists? %>
   <%= javascript_include_tag "#{params[:controller].parameterize}" %>

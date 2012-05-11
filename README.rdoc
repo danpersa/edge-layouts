@@ -1,3 +1,6 @@
 = EdgeLayouts
 
 This project rocks and uses MIT-LICENSE.
+
+gem build lorem.gemspec
+gem push lorem-0.0.1.gem
