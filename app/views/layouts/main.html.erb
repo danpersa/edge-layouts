@@ -1,15 +1,15 @@
 <% content_for :body do %>
-  <nav>
-    <% if content_for?(:navbar) %>
-      <%= yield :navbar %>
+  
+  <% if content_for?(:navbar) %>
+    <%= yield :navbar %>
+  <% else %>
+    <% if signed_in? %>
+      <%= render 'topbar/user_topbar' %>
     <% else %>
-      <% if signed_in? %>
-        <%= render 'topbar/user_topbar' %>
-      <% else %>
-        <%= render 'topbar/general_topbar' %>
-      <% end %>
+      <%= render 'topbar/general_topbar' %>
     <% end %>
-  </nav>
+  <% end %>
+  
 
   <section class="main-section">
     <div class="container">
