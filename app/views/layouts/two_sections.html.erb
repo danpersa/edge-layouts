@@ -1,8 +1,8 @@
 <% content_for :main_section do %>
-  <div class="seven columns">
+  <div class="eight columns">
     <%= content_for?(:first_section) ? yield(:first_section) : yield %>
   </div>
-  <div class="four columns offset-by-one">
+  <div class="four columns">
     <%= yield(:second_section) if content_for?(:second_section) %>
   </div>
 <% end %>
