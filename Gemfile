@@ -6,9 +6,6 @@ source "http://rubygems.org"
 gemspec
 
 
-# jquery-rails is used by the dummy application
-gem "jquery-rails"
-
 # Declare any dependencies that are still in development here instead of in
 # your gemspec. These might include edge Rails or gems from your path or
 # Git. Remember to move these dependencies to your gemspec before releasing
@@ -21,7 +18,6 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
-  gem 'zurb-foundation', '>= 3.0.5'
 end
 
 
